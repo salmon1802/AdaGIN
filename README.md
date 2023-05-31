@@ -20,3 +20,7 @@ Get the datasets from https://github.com/openbenchmark/BARS/tree/main/datasets
 ## Hyperparameter settings and logs
 Get the result from https://github.com/salmon1802/AutoGIM/tree/main/AutoGIM/checkpoints
 
+## Acknowledgement
+This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.
+BARS: https://github.com/openbenchmark
+FuxiCTR: https://github.com/xue-pai/FuxiCTR
