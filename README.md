@@ -12,6 +12,7 @@ numpy
 h5py
 tqdm
 ## Results
+![image](https://github.com/salmon1802/AutoGIM/assets/73091798/0824cdcd-7e16-4384-9dfb-7a9c68482377)
 
 ## Datasets
 Get the datasets from https://github.com/openbenchmark/BARS/tree/main/datasets
