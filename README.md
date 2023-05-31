@@ -1,6 +1,6 @@
 # Autonomous Graph Interaction Machine(AutoGIM)
 ## Model Overview
-![image](https://github.com/salmon1802/AutoGIM/assets/73091798/dc1ef97a-ce5b-4450-96d5-e3b08c895aa5)
+![image](https://github.com/salmon1802/AutoGIM/assets/73091798/e2d0233c-a5a3-4d6b-8581-167b163a5f72)
 ## Requirements
 python>=3.6  
 pytorch>=1.0  
