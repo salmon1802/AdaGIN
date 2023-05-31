@@ -1,4 +1,4 @@
-import torch
+import torch 
 from torch import nn
 from fuxictr.pytorch.models import BaseModel
 from fuxictr.pytorch.layers import FeatureEmbedding, MLP_Block
