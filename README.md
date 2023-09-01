@@ -1,4 +1,4 @@
-# AutoGIM: Autonomous Graph Interaction Machine(AutoGIM)
+# AutoGIM: Autonomous Graph Interaction Machine
 ## Model Overview
 ![image](https://github.com/salmon1802/AutoGIM/assets/73091798/7bad1cdb-c61c-4cc2-9804-2839474491d4)
 
