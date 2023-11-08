@@ -12,7 +12,7 @@ scikit-learn
 numpy  
 h5py  
 tqdm  
-## Architectures of AutoGIM
+## Experiment results
 ![image](https://github.com/salmon1802/AutoGIM/assets/73091798/41661cfc-eb45-40f9-93ea-d4fe9c636ed0)
 
 ## Datasets
