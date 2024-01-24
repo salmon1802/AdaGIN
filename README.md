@@ -1,6 +1,6 @@
 # AutoGIM: Autonomous Graph Interaction Machine
 ## Model Overview
-![image](https://github.com/salmon1802/AutoGIM/assets/73091798/7bad1cdb-c61c-4cc2-9804-2839474491d4)
+![image](https://github.com/salmon1802/AdaGIN/assets/73091798/0f29234c-3244-4742-9009-0004007468ec)
 
 ## Requirements
 python>=3.6  
@@ -13,7 +13,8 @@ numpy
 h5py  
 tqdm  
 ## Experiment results
-![image](https://github.com/salmon1802/AutoGIM/assets/73091798/41661cfc-eb45-40f9-93ea-d4fe9c636ed0)
+![image](https://github.com/salmon1802/AdaGIN/assets/73091798/390a340f-3360-4f94-9378-3b16e46415aa)
+
 
 ## Datasets
 Get the datasets from https://github.com/openbenchmark/BARS/tree/main/datasets
