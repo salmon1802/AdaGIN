@@ -1,4 +1,5 @@
-# AutoGIM: Autonomous Graph Interaction Machine
+# AdaGIN: Adaptive Graph Interaction Network for Click-Through Rate Prediction
+old name:AutoGIM: Autonomous Graph Interaction Machine
 ## Model Overview
 ![image](https://github.com/salmon1802/AdaGIN/assets/73091798/0f29234c-3244-4742-9009-0004007468ec)
 
