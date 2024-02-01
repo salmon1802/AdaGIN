@@ -1,0 +1,218 @@
+2023-12-21 16:01:34,941 P4277 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "cold_dim": "10",
+    "cold_tau": "0.001",
+    "continuous_patience": "10",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Frappe_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.1",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user', 'item', 'daytime', 'weekday', 'isweekend', 'homework', 'cost', 'weather', 'country', 'city'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[400]",
+    "gnn_layers": "1",
+    "gpu": "2",
+    "group_id": "None",
+    "hidden_activations": "leaky_relu",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "AutoGIM",
+    "model_id": "AutoGIM_Frappe_066_041d4073",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_dropout": "0.1",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "only_use_last_layer": "True",
+    "optimizer": "adamw",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2021",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Frappe_x1_h5/test.h5",
+    "train_data": "../../../data/Frappe_x1_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/Frappe_x1_h5/valid.h5",
+    "verbose": "1",
+    "w_hidden_units": "[400]",
+    "warm_dim": "10",
+    "warm_tau": "0.85"
+}
+2023-12-21 16:01:34,943 P4277 INFO Load feature_map from json: ../../../data/Frappe_x1_h5/feature_map.json
+2023-12-21 16:01:34,943 P4277 INFO Set column index...
+2023-12-21 16:01:34,943 P4277 INFO Feature specs: {
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 232, 'vocab_size': 233}",
+    "cost": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "country": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 81, 'vocab_size': 82}",
+    "daytime": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "homework": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "isweekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "item": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4083, 'vocab_size': 4084}",
+    "user": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 941, 'vocab_size': 942}",
+    "weather": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2023-12-21 16:01:41,355 P4277 INFO Total number of parameters: 1205527.
+2023-12-21 16:01:41,355 P4277 INFO Loading data...
+2023-12-21 16:01:41,355 P4277 INFO Loading data from h5: ../../../data/Frappe_x1_h5/train.h5
+2023-12-21 16:01:41,389 P4277 INFO Train samples: total/202027, blocks/1
+2023-12-21 16:01:41,389 P4277 INFO Loading data from h5: ../../../data/Frappe_x1_h5/valid.h5
+2023-12-21 16:01:41,396 P4277 INFO Validation samples: total/57722, blocks/1
+2023-12-21 16:01:41,396 P4277 INFO Loading train and validation data done.
+2023-12-21 16:01:41,396 P4277 INFO Start training: 21 batches/epoch
+2023-12-21 16:01:41,396 P4277 INFO ************ Epoch=1 start ************
+2023-12-21 16:01:42,747 P4277 INFO Train loss: 0.489344
+2023-12-21 16:01:42,747 P4277 INFO Evaluation @epoch 1 - batch 21: 
+2023-12-21 16:01:44,015 P4277 INFO ===
+2023-12-21 16:01:44,016 P4277 INFO [Metrics] AUC: 0.922161 - logloss: 0.687232
+2023-12-21 16:01:44,016 P4277 INFO Save best model: monitor(max)=0.234928
+2023-12-21 16:01:44,235 P4277 INFO ************ Epoch=1 end ************
+2023-12-21 16:01:45,474 P4277 INFO Train loss: 0.324623
+2023-12-21 16:01:45,474 P4277 INFO Evaluation @epoch 2 - batch 21: 
+2023-12-21 16:01:46,418 P4277 INFO ===
+2023-12-21 16:01:46,419 P4277 INFO [Metrics] AUC: 0.950478 - logloss: 0.674618
+2023-12-21 16:01:46,419 P4277 INFO Save best model: monitor(max)=0.275859
+2023-12-21 16:01:46,594 P4277 INFO ************ Epoch=2 end ************
+2023-12-21 16:01:47,973 P4277 INFO Train loss: 0.267234
+2023-12-21 16:01:47,973 P4277 INFO Evaluation @epoch 3 - batch 21: 
+2023-12-21 16:01:48,905 P4277 INFO ===
+2023-12-21 16:01:48,906 P4277 INFO [Metrics] AUC: 0.964366 - logloss: 0.615889
+2023-12-21 16:01:48,906 P4277 INFO Save best model: monitor(max)=0.348477
+2023-12-21 16:01:49,072 P4277 INFO ************ Epoch=3 end ************
+2023-12-21 16:01:50,285 P4277 INFO Train loss: 0.237370
+2023-12-21 16:01:50,285 P4277 INFO Evaluation @epoch 4 - batch 21: 
+2023-12-21 16:01:51,251 P4277 INFO ===
+2023-12-21 16:01:51,251 P4277 INFO [Metrics] AUC: 0.971033 - logloss: 0.395774
+2023-12-21 16:01:51,251 P4277 INFO Save best model: monitor(max)=0.575259
+2023-12-21 16:01:51,465 P4277 INFO ************ Epoch=4 end ************
+2023-12-21 16:01:52,701 P4277 INFO Train loss: 0.218260
+2023-12-21 16:01:52,702 P4277 INFO Evaluation @epoch 5 - batch 21: 
+2023-12-21 16:01:53,756 P4277 INFO ===
+2023-12-21 16:01:53,756 P4277 INFO [Metrics] AUC: 0.969861 - logloss: 0.199787
+2023-12-21 16:01:53,757 P4277 INFO Save best model: monitor(max)=0.770074
+2023-12-21 16:01:53,986 P4277 INFO ************ Epoch=5 end ************
+2023-12-21 16:01:55,212 P4277 INFO Train loss: 0.207699
+2023-12-21 16:01:55,212 P4277 INFO Evaluation @epoch 6 - batch 21: 
+2023-12-21 16:01:56,399 P4277 INFO ===
+2023-12-21 16:01:56,400 P4277 INFO [Metrics] AUC: 0.975566 - logloss: 0.185774
+2023-12-21 16:01:56,400 P4277 INFO Save best model: monitor(max)=0.789793
+2023-12-21 16:01:56,579 P4277 INFO ************ Epoch=6 end ************
+2023-12-21 16:01:57,731 P4277 INFO Train loss: 0.201790
+2023-12-21 16:01:57,732 P4277 INFO Evaluation @epoch 7 - batch 21: 
+2023-12-21 16:01:58,726 P4277 INFO ===
+2023-12-21 16:01:58,727 P4277 INFO [Metrics] AUC: 0.978122 - logloss: 0.588840
+2023-12-21 16:01:58,727 P4277 INFO Monitor(max)=0.389282 STOP!
+2023-12-21 16:01:58,727 P4277 INFO Reduce learning rate on plateau: 0.000100
+2023-12-21 16:01:58,878 P4277 INFO ************ Epoch=7 end ************
+2023-12-21 16:02:00,210 P4277 INFO Train loss: 0.162098
+2023-12-21 16:02:00,210 P4277 INFO Evaluation @epoch 8 - batch 21: 
+2023-12-21 16:02:01,224 P4277 INFO ===
+2023-12-21 16:02:01,224 P4277 INFO [Metrics] AUC: 0.982888 - logloss: 0.183274
+2023-12-21 16:02:01,225 P4277 INFO Save best model: monitor(max)=0.799614
+2023-12-21 16:02:01,418 P4277 INFO ************ Epoch=8 end ************
+2023-12-21 16:02:02,669 P4277 INFO Train loss: 0.135296
+2023-12-21 16:02:02,669 P4277 INFO Evaluation @epoch 9 - batch 21: 
+2023-12-21 16:02:03,644 P4277 INFO ===
+2023-12-21 16:02:03,644 P4277 INFO [Metrics] AUC: 0.984176 - logloss: 0.166021
+2023-12-21 16:02:03,644 P4277 INFO Save best model: monitor(max)=0.818155
+2023-12-21 16:02:03,846 P4277 INFO ************ Epoch=9 end ************
+2023-12-21 16:02:05,101 P4277 INFO Train loss: 0.118169
+2023-12-21 16:02:05,101 P4277 INFO Evaluation @epoch 10 - batch 21: 
+2023-12-21 16:02:06,172 P4277 INFO ===
+2023-12-21 16:02:06,173 P4277 INFO [Metrics] AUC: 0.984713 - logloss: 0.156197
+2023-12-21 16:02:06,173 P4277 INFO Save best model: monitor(max)=0.828516
+2023-12-21 16:02:06,364 P4277 INFO ************ Epoch=10 end ************
+2023-12-21 16:02:07,544 P4277 INFO Train loss: 0.107807
+2023-12-21 16:02:07,544 P4277 INFO Evaluation @epoch 11 - batch 21: 
+2023-12-21 16:02:08,625 P4277 INFO ===
+2023-12-21 16:02:08,627 P4277 INFO [Metrics] AUC: 0.984932 - logloss: 0.184222
+2023-12-21 16:02:08,627 P4277 INFO Monitor(max)=0.800710 STOP!
+2023-12-21 16:02:08,627 P4277 INFO Reduce learning rate on plateau: 0.000010
+2023-12-21 16:02:08,770 P4277 INFO ************ Epoch=11 end ************
+2023-12-21 16:02:10,073 P4277 INFO Train loss: 0.100475
+2023-12-21 16:02:10,074 P4277 INFO Evaluation @epoch 12 - batch 21: 
+2023-12-21 16:02:11,053 P4277 INFO ===
+2023-12-21 16:02:11,053 P4277 INFO [Metrics] AUC: 0.985103 - logloss: 0.143779
+2023-12-21 16:02:11,053 P4277 INFO Save best model: monitor(max)=0.841324
+2023-12-21 16:02:11,205 P4277 INFO ************ Epoch=12 end ************
+2023-12-21 16:02:12,514 P4277 INFO Train loss: 0.099007
+2023-12-21 16:02:12,515 P4277 INFO Evaluation @epoch 13 - batch 21: 
+2023-12-21 16:02:13,673 P4277 INFO ===
+2023-12-21 16:02:13,673 P4277 INFO [Metrics] AUC: 0.985139 - logloss: 0.142577
+2023-12-21 16:02:13,674 P4277 INFO Save best model: monitor(max)=0.842562
+2023-12-21 16:02:13,841 P4277 INFO ************ Epoch=13 end ************
+2023-12-21 16:02:15,230 P4277 INFO Train loss: 0.098239
+2023-12-21 16:02:15,230 P4277 INFO Evaluation @epoch 14 - batch 21: 
+2023-12-21 16:02:16,219 P4277 INFO ===
+2023-12-21 16:02:16,219 P4277 INFO [Metrics] AUC: 0.985180 - logloss: 0.142438
+2023-12-21 16:02:16,219 P4277 INFO Save best model: monitor(max)=0.842742
+2023-12-21 16:02:16,485 P4277 INFO ************ Epoch=14 end ************
+2023-12-21 16:02:17,650 P4277 INFO Train loss: 0.097424
+2023-12-21 16:02:17,650 P4277 INFO Evaluation @epoch 15 - batch 21: 
+2023-12-21 16:02:18,780 P4277 INFO ===
+2023-12-21 16:02:18,780 P4277 INFO [Metrics] AUC: 0.985196 - logloss: 0.142386
+2023-12-21 16:02:18,781 P4277 INFO Save best model: monitor(max)=0.842810
+2023-12-21 16:02:18,953 P4277 INFO ************ Epoch=15 end ************
+2023-12-21 16:02:20,226 P4277 INFO Train loss: 0.096254
+2023-12-21 16:02:20,226 P4277 INFO Evaluation @epoch 16 - batch 21: 
+2023-12-21 16:02:21,305 P4277 INFO ===
+2023-12-21 16:02:21,305 P4277 INFO [Metrics] AUC: 0.985199 - logloss: 0.142347
+2023-12-21 16:02:21,306 P4277 INFO Save best model: monitor(max)=0.842852
+2023-12-21 16:02:21,517 P4277 INFO ************ Epoch=16 end ************
+2023-12-21 16:02:22,772 P4277 INFO Train loss: 0.095735
+2023-12-21 16:02:22,772 P4277 INFO Evaluation @epoch 17 - batch 21: 
+2023-12-21 16:02:23,742 P4277 INFO ===
+2023-12-21 16:02:23,743 P4277 INFO [Metrics] AUC: 0.985185 - logloss: 0.142770
+2023-12-21 16:02:23,743 P4277 INFO Monitor(max)=0.842415 STOP!
+2023-12-21 16:02:23,743 P4277 INFO Reduce learning rate on plateau: 0.000001
+2023-12-21 16:02:23,920 P4277 INFO ************ Epoch=17 end ************
+2023-12-21 16:02:25,181 P4277 INFO Train loss: 0.095153
+2023-12-21 16:02:25,181 P4277 INFO Evaluation @epoch 18 - batch 21: 
+2023-12-21 16:02:26,455 P4277 INFO ===
+2023-12-21 16:02:26,455 P4277 INFO [Metrics] AUC: 0.985193 - logloss: 0.141694
+2023-12-21 16:02:26,456 P4277 INFO Save best model: monitor(max)=0.843499
+2023-12-21 16:02:26,649 P4277 INFO ************ Epoch=18 end ************
+2023-12-21 16:02:28,025 P4277 INFO Train loss: 0.094615
+2023-12-21 16:02:28,025 P4277 INFO Evaluation @epoch 19 - batch 21: 
+2023-12-21 16:02:29,000 P4277 INFO ===
+2023-12-21 16:02:29,000 P4277 INFO [Metrics] AUC: 0.985204 - logloss: 0.141446
+2023-12-21 16:02:29,000 P4277 INFO Save best model: monitor(max)=0.843758
+2023-12-21 16:02:29,159 P4277 INFO ************ Epoch=19 end ************
+2023-12-21 16:02:30,449 P4277 INFO Train loss: 0.094658
+2023-12-21 16:02:30,450 P4277 INFO Evaluation @epoch 20 - batch 21: 
+2023-12-21 16:02:31,604 P4277 INFO ===
+2023-12-21 16:02:31,604 P4277 INFO [Metrics] AUC: 0.985207 - logloss: 0.141514
+2023-12-21 16:02:31,604 P4277 INFO Monitor(max)=0.843693 STOP!
+2023-12-21 16:02:31,605 P4277 INFO Reduce learning rate on plateau: 0.000001
+2023-12-21 16:02:31,849 P4277 INFO ************ Epoch=20 end ************
+2023-12-21 16:02:33,279 P4277 INFO Train loss: 0.094713
+2023-12-21 16:02:33,279 P4277 INFO Evaluation @epoch 21 - batch 21: 
+2023-12-21 16:02:34,521 P4277 INFO ===
+2023-12-21 16:02:34,521 P4277 INFO [Metrics] AUC: 0.985202 - logloss: 0.141537
+2023-12-21 16:02:34,521 P4277 INFO Monitor(max)=0.843665 STOP!
+2023-12-21 16:02:34,521 P4277 INFO Reduce learning rate on plateau: 0.000001
+2023-12-21 16:02:34,521 P4277 INFO ********* Epoch==21 early stop *********
+2023-12-21 16:02:34,668 P4277 INFO Training finished.
+2023-12-21 16:02:34,669 P4277 INFO Load best model: /root/autodl-tmp/model_zoo/DNN_plus/DNN_torch/checkpoints/Frappe_x1_h5/AutoGIM_Frappe_066_041d4073.model
+2023-12-21 16:02:34,679 P4277 INFO ****** Validation evaluation ******
+2023-12-21 16:02:35,625 P4277 INFO ===
+2023-12-21 16:02:35,625 P4277 INFO [Metrics] logloss: 0.141446 - AUC: 0.985204
+2023-12-21 16:02:35,690 P4277 INFO ******** Test evaluation ********
+2023-12-21 16:02:35,690 P4277 INFO Loading data...
+2023-12-21 16:02:35,690 P4277 INFO Loading data from h5: ../../../data/Frappe_x1_h5/test.h5
+2023-12-21 16:02:35,696 P4277 INFO Test samples: total/28860, blocks/1
+2023-12-21 16:02:35,696 P4277 INFO Loading test data done.
+2023-12-21 16:02:36,705 P4277 INFO ===
+2023-12-21 16:02:36,705 P4277 INFO [Metrics] logloss: 0.142796 - AUC: 0.984899

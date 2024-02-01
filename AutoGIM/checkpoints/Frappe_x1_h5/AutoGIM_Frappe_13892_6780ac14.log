@@ -1,0 +1,255 @@
+2023-12-23 04:33:23,836 P3940900 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "cold_dim": "10",
+    "cold_tau": "0.001",
+    "continuous_patience": "10",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Frappe_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.1",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user', 'item', 'daytime', 'weekday', 'isweekend', 'homework', 'cost', 'weather', 'country', 'city'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[400]",
+    "gnn_layers": "2",
+    "gpu": "1",
+    "group_id": "None",
+    "hidden_activations": "leaky_relu",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "AutoGIM",
+    "model_id": "AutoGIM_Frappe_13892_6780ac14",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "only_use_last_layer": "True",
+    "optimizer": "adamw",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "3407",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Frappe_x1_h5/test.h5",
+    "train_data": "../../../data/Frappe_x1_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/Frappe_x1_h5/valid.h5",
+    "verbose": "1",
+    "w_hidden_units": "[400]",
+    "warm_dim": "10",
+    "warm_tau": "1.15"
+}
+2023-12-23 04:33:23,837 P3940900 INFO Load feature_map from json: ../../../data/Frappe_x1_h5/feature_map.json
+2023-12-23 04:33:23,837 P3940900 INFO Set column index...
+2023-12-23 04:33:23,838 P3940900 INFO Feature specs: {
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 232, 'vocab_size': 233}",
+    "cost": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "country": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 81, 'vocab_size': 82}",
+    "daytime": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "homework": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "isweekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "item": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4083, 'vocab_size': 4084}",
+    "user": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 941, 'vocab_size': 942}",
+    "weather": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2023-12-23 04:33:27,609 P3940900 INFO Total number of parameters: 1205528.
+2023-12-23 04:33:27,609 P3940900 INFO Loading data...
+2023-12-23 04:33:27,609 P3940900 INFO Loading data from h5: ../../../data/Frappe_x1_h5/train.h5
+2023-12-23 04:33:27,630 P3940900 INFO Train samples: total/202027, blocks/1
+2023-12-23 04:33:27,630 P3940900 INFO Loading data from h5: ../../../data/Frappe_x1_h5/valid.h5
+2023-12-23 04:33:27,635 P3940900 INFO Validation samples: total/57722, blocks/1
+2023-12-23 04:33:27,636 P3940900 INFO Loading train and validation data done.
+2023-12-23 04:33:27,636 P3940900 INFO Start training: 21 batches/epoch
+2023-12-23 04:33:27,636 P3940900 INFO ************ Epoch=1 start ************
+2023-12-23 04:33:28,808 P3940900 INFO Train loss: 0.487288
+2023-12-23 04:33:28,816 P3940900 INFO Evaluation @epoch 1 - batch 21: 
+2023-12-23 04:33:29,529 P3940900 INFO ===
+2023-12-23 04:33:29,529 P3940900 INFO [Metrics] AUC: 0.933271 - logloss: 0.689446
+2023-12-23 04:33:29,530 P3940900 INFO Save best model: monitor(max)=0.243825
+2023-12-23 04:33:29,667 P3940900 INFO ************ Epoch=1 end ************
+2023-12-23 04:33:30,862 P3940900 INFO Train loss: 0.329795
+2023-12-23 04:33:30,862 P3940900 INFO Evaluation @epoch 2 - batch 21: 
+2023-12-23 04:33:31,485 P3940900 INFO ===
+2023-12-23 04:33:31,485 P3940900 INFO [Metrics] AUC: 0.950024 - logloss: 0.681320
+2023-12-23 04:33:31,485 P3940900 INFO Save best model: monitor(max)=0.268704
+2023-12-23 04:33:31,613 P3940900 INFO ************ Epoch=2 end ************
+2023-12-23 04:33:32,747 P3940900 INFO Train loss: 0.273693
+2023-12-23 04:33:32,747 P3940900 INFO Evaluation @epoch 3 - batch 21: 
+2023-12-23 04:33:33,385 P3940900 INFO ===
+2023-12-23 04:33:33,385 P3940900 INFO [Metrics] AUC: 0.964931 - logloss: 0.645382
+2023-12-23 04:33:33,385 P3940900 INFO Save best model: monitor(max)=0.319549
+2023-12-23 04:33:33,531 P3940900 INFO ************ Epoch=3 end ************
+2023-12-23 04:33:34,611 P3940900 INFO Train loss: 0.243023
+2023-12-23 04:33:34,611 P3940900 INFO Evaluation @epoch 4 - batch 21: 
+2023-12-23 04:33:35,212 P3940900 INFO ===
+2023-12-23 04:33:35,212 P3940900 INFO [Metrics] AUC: 0.971205 - logloss: 0.469919
+2023-12-23 04:33:35,212 P3940900 INFO Save best model: monitor(max)=0.501286
+2023-12-23 04:33:35,353 P3940900 INFO ************ Epoch=4 end ************
+2023-12-23 04:33:36,434 P3940900 INFO Train loss: 0.226086
+2023-12-23 04:33:36,435 P3940900 INFO Evaluation @epoch 5 - batch 21: 
+2023-12-23 04:33:37,045 P3940900 INFO ===
+2023-12-23 04:33:37,045 P3940900 INFO [Metrics] AUC: 0.973978 - logloss: 0.205740
+2023-12-23 04:33:37,045 P3940900 INFO Save best model: monitor(max)=0.768238
+2023-12-23 04:33:37,164 P3940900 INFO ************ Epoch=5 end ************
+2023-12-23 04:33:38,303 P3940900 INFO Train loss: 0.216220
+2023-12-23 04:33:38,303 P3940900 INFO Evaluation @epoch 6 - batch 21: 
+2023-12-23 04:33:38,877 P3940900 INFO ===
+2023-12-23 04:33:38,877 P3940900 INFO [Metrics] AUC: 0.977164 - logloss: 0.176114
+2023-12-23 04:33:38,877 P3940900 INFO Save best model: monitor(max)=0.801049
+2023-12-23 04:33:39,019 P3940900 INFO ************ Epoch=6 end ************
+2023-12-23 04:33:40,052 P3940900 INFO Train loss: 0.211946
+2023-12-23 04:33:40,052 P3940900 INFO Evaluation @epoch 7 - batch 21: 
+2023-12-23 04:33:40,587 P3940900 INFO ===
+2023-12-23 04:33:40,587 P3940900 INFO [Metrics] AUC: 0.979862 - logloss: 0.177276
+2023-12-23 04:33:40,587 P3940900 INFO Save best model: monitor(max)=0.802585
+2023-12-23 04:33:40,754 P3940900 INFO ************ Epoch=7 end ************
+2023-12-23 04:33:41,844 P3940900 INFO Train loss: 0.204471
+2023-12-23 04:33:41,844 P3940900 INFO Evaluation @epoch 8 - batch 21: 
+2023-12-23 04:33:42,467 P3940900 INFO ===
+2023-12-23 04:33:42,467 P3940900 INFO [Metrics] AUC: 0.980074 - logloss: 0.171275
+2023-12-23 04:33:42,468 P3940900 INFO Save best model: monitor(max)=0.808799
+2023-12-23 04:33:42,628 P3940900 INFO ************ Epoch=8 end ************
+2023-12-23 04:33:43,717 P3940900 INFO Train loss: 0.200403
+2023-12-23 04:33:43,717 P3940900 INFO Evaluation @epoch 9 - batch 21: 
+2023-12-23 04:33:44,543 P3940900 INFO ===
+2023-12-23 04:33:44,543 P3940900 INFO [Metrics] AUC: 0.980206 - logloss: 0.259526
+2023-12-23 04:33:44,543 P3940900 INFO Monitor(max)=0.720680 STOP!
+2023-12-23 04:33:44,543 P3940900 INFO Reduce learning rate on plateau: 0.000100
+2023-12-23 04:33:44,715 P3940900 INFO ************ Epoch=9 end ************
+2023-12-23 04:33:45,883 P3940900 INFO Train loss: 0.165831
+2023-12-23 04:33:45,883 P3940900 INFO Evaluation @epoch 10 - batch 21: 
+2023-12-23 04:33:46,592 P3940900 INFO ===
+2023-12-23 04:33:46,592 P3940900 INFO [Metrics] AUC: 0.983809 - logloss: 0.150121
+2023-12-23 04:33:46,592 P3940900 INFO Save best model: monitor(max)=0.833689
+2023-12-23 04:33:46,773 P3940900 INFO ************ Epoch=10 end ************
+2023-12-23 04:33:47,902 P3940900 INFO Train loss: 0.140802
+2023-12-23 04:33:47,903 P3940900 INFO Evaluation @epoch 11 - batch 21: 
+2023-12-23 04:33:48,543 P3940900 INFO ===
+2023-12-23 04:33:48,543 P3940900 INFO [Metrics] AUC: 0.985070 - logloss: 0.148754
+2023-12-23 04:33:48,544 P3940900 INFO Save best model: monitor(max)=0.836316
+2023-12-23 04:33:48,695 P3940900 INFO ************ Epoch=11 end ************
+2023-12-23 04:33:49,860 P3940900 INFO Train loss: 0.123672
+2023-12-23 04:33:49,860 P3940900 INFO Evaluation @epoch 12 - batch 21: 
+2023-12-23 04:33:50,528 P3940900 INFO ===
+2023-12-23 04:33:50,529 P3940900 INFO [Metrics] AUC: 0.985844 - logloss: 0.146308
+2023-12-23 04:33:50,529 P3940900 INFO Save best model: monitor(max)=0.839536
+2023-12-23 04:33:50,648 P3940900 INFO ************ Epoch=12 end ************
+2023-12-23 04:33:51,773 P3940900 INFO Train loss: 0.112216
+2023-12-23 04:33:51,773 P3940900 INFO Evaluation @epoch 13 - batch 21: 
+2023-12-23 04:33:52,363 P3940900 INFO ===
+2023-12-23 04:33:52,363 P3940900 INFO [Metrics] AUC: 0.986071 - logloss: 0.146505
+2023-12-23 04:33:52,363 P3940900 INFO Save best model: monitor(max)=0.839566
+2023-12-23 04:33:52,495 P3940900 INFO ************ Epoch=13 end ************
+2023-12-23 04:33:53,605 P3940900 INFO Train loss: 0.103524
+2023-12-23 04:33:53,605 P3940900 INFO Evaluation @epoch 14 - batch 21: 
+2023-12-23 04:33:54,164 P3940900 INFO ===
+2023-12-23 04:33:54,164 P3940900 INFO [Metrics] AUC: 0.986182 - logloss: 0.148749
+2023-12-23 04:33:54,164 P3940900 INFO Monitor(max)=0.837434 STOP!
+2023-12-23 04:33:54,164 P3940900 INFO Reduce learning rate on plateau: 0.000010
+2023-12-23 04:33:54,274 P3940900 INFO ************ Epoch=14 end ************
+2023-12-23 04:33:55,285 P3940900 INFO Train loss: 0.097445
+2023-12-23 04:33:55,285 P3940900 INFO Evaluation @epoch 15 - batch 21: 
+2023-12-23 04:33:55,948 P3940900 INFO ===
+2023-12-23 04:33:55,949 P3940900 INFO [Metrics] AUC: 0.986362 - logloss: 0.138057
+2023-12-23 04:33:55,949 P3940900 INFO Save best model: monitor(max)=0.848306
+2023-12-23 04:33:56,087 P3940900 INFO ************ Epoch=15 end ************
+2023-12-23 04:33:57,118 P3940900 INFO Train loss: 0.096742
+2023-12-23 04:33:57,119 P3940900 INFO Evaluation @epoch 16 - batch 21: 
+2023-12-23 04:33:57,683 P3940900 INFO ===
+2023-12-23 04:33:57,683 P3940900 INFO [Metrics] AUC: 0.986368 - logloss: 0.137432
+2023-12-23 04:33:57,683 P3940900 INFO Save best model: monitor(max)=0.848935
+2023-12-23 04:33:57,800 P3940900 INFO ************ Epoch=16 end ************
+2023-12-23 04:33:58,831 P3940900 INFO Train loss: 0.095861
+2023-12-23 04:33:58,831 P3940900 INFO Evaluation @epoch 17 - batch 21: 
+2023-12-23 04:33:59,410 P3940900 INFO ===
+2023-12-23 04:33:59,410 P3940900 INFO [Metrics] AUC: 0.986415 - logloss: 0.137023
+2023-12-23 04:33:59,410 P3940900 INFO Save best model: monitor(max)=0.849392
+2023-12-23 04:33:59,530 P3940900 INFO ************ Epoch=17 end ************
+2023-12-23 04:34:00,591 P3940900 INFO Train loss: 0.094809
+2023-12-23 04:34:00,591 P3940900 INFO Evaluation @epoch 18 - batch 21: 
+2023-12-23 04:34:01,132 P3940900 INFO ===
+2023-12-23 04:34:01,132 P3940900 INFO [Metrics] AUC: 0.986431 - logloss: 0.137038
+2023-12-23 04:34:01,132 P3940900 INFO Save best model: monitor(max)=0.849393
+2023-12-23 04:34:01,249 P3940900 INFO ************ Epoch=18 end ************
+2023-12-23 04:34:02,359 P3940900 INFO Train loss: 0.094249
+2023-12-23 04:34:02,360 P3940900 INFO Evaluation @epoch 19 - batch 21: 
+2023-12-23 04:34:02,961 P3940900 INFO ===
+2023-12-23 04:34:02,961 P3940900 INFO [Metrics] AUC: 0.986483 - logloss: 0.136987
+2023-12-23 04:34:02,961 P3940900 INFO Save best model: monitor(max)=0.849496
+2023-12-23 04:34:03,153 P3940900 INFO ************ Epoch=19 end ************
+2023-12-23 04:34:04,274 P3940900 INFO Train loss: 0.093306
+2023-12-23 04:34:04,274 P3940900 INFO Evaluation @epoch 20 - batch 21: 
+2023-12-23 04:34:04,871 P3940900 INFO ===
+2023-12-23 04:34:04,871 P3940900 INFO [Metrics] AUC: 0.986440 - logloss: 0.137262
+2023-12-23 04:34:04,872 P3940900 INFO Monitor(max)=0.849178 STOP!
+2023-12-23 04:34:04,872 P3940900 INFO Reduce learning rate on plateau: 0.000001
+2023-12-23 04:34:04,994 P3940900 INFO ************ Epoch=20 end ************
+2023-12-23 04:34:06,134 P3940900 INFO Train loss: 0.092643
+2023-12-23 04:34:06,135 P3940900 INFO Evaluation @epoch 21 - batch 21: 
+2023-12-23 04:34:06,702 P3940900 INFO ===
+2023-12-23 04:34:06,702 P3940900 INFO [Metrics] AUC: 0.986452 - logloss: 0.136472
+2023-12-23 04:34:06,702 P3940900 INFO Save best model: monitor(max)=0.849980
+2023-12-23 04:34:06,845 P3940900 INFO ************ Epoch=21 end ************
+2023-12-23 04:34:07,887 P3940900 INFO Train loss: 0.092629
+2023-12-23 04:34:07,887 P3940900 INFO Evaluation @epoch 22 - batch 21: 
+2023-12-23 04:34:08,478 P3940900 INFO ===
+2023-12-23 04:34:08,478 P3940900 INFO [Metrics] AUC: 0.986454 - logloss: 0.136339
+2023-12-23 04:34:08,478 P3940900 INFO Save best model: monitor(max)=0.850114
+2023-12-23 04:34:08,604 P3940900 INFO ************ Epoch=22 end ************
+2023-12-23 04:34:09,676 P3940900 INFO Train loss: 0.092729
+2023-12-23 04:34:09,677 P3940900 INFO Evaluation @epoch 23 - batch 21: 
+2023-12-23 04:34:10,209 P3940900 INFO ===
+2023-12-23 04:34:10,209 P3940900 INFO [Metrics] AUC: 0.986458 - logloss: 0.136349
+2023-12-23 04:34:10,210 P3940900 INFO Monitor(max)=0.850109 STOP!
+2023-12-23 04:34:10,210 P3940900 INFO Reduce learning rate on plateau: 0.000001
+2023-12-23 04:34:10,371 P3940900 INFO ************ Epoch=23 end ************
+2023-12-23 04:34:11,501 P3940900 INFO Train loss: 0.092466
+2023-12-23 04:34:11,502 P3940900 INFO Evaluation @epoch 24 - batch 21: 
+2023-12-23 04:34:12,068 P3940900 INFO ===
+2023-12-23 04:34:12,068 P3940900 INFO [Metrics] AUC: 0.986485 - logloss: 0.136307
+2023-12-23 04:34:12,069 P3940900 INFO Save best model: monitor(max)=0.850178
+2023-12-23 04:34:12,205 P3940900 INFO ************ Epoch=24 end ************
+2023-12-23 04:34:13,350 P3940900 INFO Train loss: 0.092715
+2023-12-23 04:34:13,350 P3940900 INFO Evaluation @epoch 25 - batch 21: 
+2023-12-23 04:34:14,035 P3940900 INFO ===
+2023-12-23 04:34:14,035 P3940900 INFO [Metrics] AUC: 0.986496 - logloss: 0.136096
+2023-12-23 04:34:14,035 P3940900 INFO Save best model: monitor(max)=0.850400
+2023-12-23 04:34:14,200 P3940900 INFO ************ Epoch=25 end ************
+2023-12-23 04:34:15,325 P3940900 INFO Train loss: 0.092544
+2023-12-23 04:34:15,325 P3940900 INFO Evaluation @epoch 26 - batch 21: 
+2023-12-23 04:34:15,945 P3940900 INFO ===
+2023-12-23 04:34:15,945 P3940900 INFO [Metrics] AUC: 0.986473 - logloss: 0.136335
+2023-12-23 04:34:15,946 P3940900 INFO Monitor(max)=0.850138 STOP!
+2023-12-23 04:34:15,946 P3940900 INFO Reduce learning rate on plateau: 0.000001
+2023-12-23 04:34:16,055 P3940900 INFO ************ Epoch=26 end ************
+2023-12-23 04:34:17,091 P3940900 INFO Train loss: 0.092467
+2023-12-23 04:34:17,092 P3940900 INFO Evaluation @epoch 27 - batch 21: 
+2023-12-23 04:34:17,733 P3940900 INFO ===
+2023-12-23 04:34:17,733 P3940900 INFO [Metrics] AUC: 0.986499 - logloss: 0.136136
+2023-12-23 04:34:17,734 P3940900 INFO Monitor(max)=0.850363 STOP!
+2023-12-23 04:34:17,734 P3940900 INFO Reduce learning rate on plateau: 0.000001
+2023-12-23 04:34:17,734 P3940900 INFO ********* Epoch==27 early stop *********
+2023-12-23 04:34:17,843 P3940900 INFO Training finished.
+2023-12-23 04:34:17,844 P3940900 INFO Load best model: /mnt/public/lhh/code/model_zoo/DNN_plus/DNN_torch/checkpoints/Frappe_x1_h5/AutoGIM_Frappe_13892_6780ac14.model
+2023-12-23 04:34:17,856 P3940900 INFO ****** Validation evaluation ******
+2023-12-23 04:34:18,504 P3940900 INFO ===
+2023-12-23 04:34:18,505 P3940900 INFO [Metrics] logloss: 0.136261 - AUC: 0.986468
+2023-12-23 04:34:18,552 P3940900 INFO ******** Test evaluation ********
+2023-12-23 04:34:18,553 P3940900 INFO Loading data...
+2023-12-23 04:34:18,553 P3940900 INFO Loading data from h5: ../../../data/Frappe_x1_h5/test.h5
+2023-12-23 04:34:18,558 P3940900 INFO Test samples: total/28860, blocks/1
+2023-12-23 04:34:18,558 P3940900 INFO Loading test data done.
+2023-12-23 04:34:19,026 P3940900 INFO ===
+2023-12-23 04:34:19,026 P3940900 INFO [Metrics] logloss: 0.141953 - AUC: 0.985458
