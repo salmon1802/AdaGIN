@@ -1,0 +1,165 @@
+2024-05-14 15:17:08,668 P2337524 INFO Params: {
+    "batch_norm": "False",
+    "batch_size": "10000",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "ML_1M_7",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': ['UserID', 'Gender', 'Age', 'Occupation', 'MovieID', 'Release'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 5, 'name': 'Genres', 'type': 'sequence', 'splitter': '^'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "hidden_activations": "leaky_relu",
+    "hidden_units": "[400, 400, 400]",
+    "label_col": "{'dtype': 'float', 'name': 'Label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "EP_DNN",
+    "model_id": "EPNN_20_ML_1M_7",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/ML-1M_7/test.csv",
+    "train_data": "../../../data/ML-1M_7/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/ML-1M_7/valid.csv",
+    "verbose": "1"
+}
+2024-05-14 15:17:08,669 P2337524 INFO Set up feature processor...
+2024-05-14 15:17:08,670 P2337524 WARNING Skip rebuilding ../../../data/ML_1M_7/feature_map.json. Please delete it manually if rebuilding is required.
+2024-05-14 15:17:08,670 P2337524 INFO Load feature_map from json: ../../../data/ML_1M_7/feature_map.json
+2024-05-14 15:17:08,670 P2337524 INFO Set column index...
+2024-05-14 15:17:08,670 P2337524 INFO Feature specs: {
+    "Age": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "Gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "Genres": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 19, 'vocab_size': 20, 'max_len': 5}",
+    "MovieID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3497, 'vocab_size': 3498}",
+    "Occupation": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "Release": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "UserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6041, 'vocab_size': 6042}"
+}
+2024-05-14 15:17:12,266 P2337524 INFO Total number of parameters: 737721.
+2024-05-14 15:17:12,266 P2337524 INFO Loading data...
+2024-05-14 15:17:12,266 P2337524 INFO Loading data from h5: ../../../data/ML_1M_7/train.h5
+2024-05-14 15:17:12,324 P2337524 INFO Train samples: total/591209, blocks/1
+2024-05-14 15:17:12,324 P2337524 INFO Loading data from h5: ../../../data/ML_1M_7/valid.h5
+2024-05-14 15:17:12,330 P2337524 INFO Validation samples: total/73901, blocks/1
+2024-05-14 15:17:12,330 P2337524 INFO Loading train and validation data done.
+2024-05-14 15:17:12,330 P2337524 INFO Start training: 60 batches/epoch
+2024-05-14 15:17:12,330 P2337524 INFO ************ Epoch=1 start ************
+2024-05-14 15:17:13,681 P2337524 INFO Train loss: 0.550565
+2024-05-14 15:17:13,681 P2337524 INFO Evaluation @epoch 1 - batch 60: 
+2024-05-14 15:17:14,329 P2337524 INFO ===
+2024-05-14 15:17:14,329 P2337524 INFO [Metrics] AUC: 0.669669 - logloss: 0.508595
+2024-05-14 15:17:14,330 P2337524 INFO Save best model: monitor(max)=0.161074
+2024-05-14 15:17:14,478 P2337524 INFO ************ Epoch=1 end ************
+2024-05-14 15:17:15,968 P2337524 INFO Train loss: 0.438725
+2024-05-14 15:17:15,968 P2337524 INFO Evaluation @epoch 2 - batch 60: 
+2024-05-14 15:17:16,589 P2337524 INFO ===
+2024-05-14 15:17:16,590 P2337524 INFO [Metrics] AUC: 0.855816 - logloss: 0.362550
+2024-05-14 15:17:16,590 P2337524 INFO Save best model: monitor(max)=0.493267
+2024-05-14 15:17:16,802 P2337524 INFO ************ Epoch=2 end ************
+2024-05-14 15:17:18,529 P2337524 INFO Train loss: 0.387814
+2024-05-14 15:17:18,530 P2337524 INFO Evaluation @epoch 3 - batch 60: 
+2024-05-14 15:17:19,421 P2337524 INFO ===
+2024-05-14 15:17:19,421 P2337524 INFO [Metrics] AUC: 0.863538 - logloss: 0.356986
+2024-05-14 15:17:19,421 P2337524 INFO Save best model: monitor(max)=0.506552
+2024-05-14 15:17:19,602 P2337524 INFO ************ Epoch=3 end ************
+2024-05-14 15:17:21,655 P2337524 INFO Train loss: 0.373774
+2024-05-14 15:17:21,656 P2337524 INFO Evaluation @epoch 4 - batch 60: 
+2024-05-14 15:17:22,562 P2337524 INFO ===
+2024-05-14 15:17:22,562 P2337524 INFO [Metrics] AUC: 0.871251 - logloss: 0.346667
+2024-05-14 15:17:22,562 P2337524 INFO Save best model: monitor(max)=0.524585
+2024-05-14 15:17:22,807 P2337524 INFO ************ Epoch=4 end ************
+2024-05-14 15:17:24,600 P2337524 INFO Train loss: 0.366306
+2024-05-14 15:17:24,601 P2337524 INFO Evaluation @epoch 5 - batch 60: 
+2024-05-14 15:17:25,422 P2337524 INFO ===
+2024-05-14 15:17:25,422 P2337524 INFO [Metrics] AUC: 0.879707 - logloss: 0.335324
+2024-05-14 15:17:25,422 P2337524 INFO Save best model: monitor(max)=0.544383
+2024-05-14 15:17:25,632 P2337524 INFO ************ Epoch=5 end ************
+2024-05-14 15:17:27,493 P2337524 INFO Train loss: 0.359699
+2024-05-14 15:17:27,493 P2337524 INFO Evaluation @epoch 6 - batch 60: 
+2024-05-14 15:17:28,352 P2337524 INFO ===
+2024-05-14 15:17:28,352 P2337524 INFO [Metrics] AUC: 0.882885 - logloss: 0.331121
+2024-05-14 15:17:28,353 P2337524 INFO Save best model: monitor(max)=0.551764
+2024-05-14 15:17:28,531 P2337524 INFO ************ Epoch=6 end ************
+2024-05-14 15:17:30,273 P2337524 INFO Train loss: 0.353566
+2024-05-14 15:17:30,273 P2337524 INFO Evaluation @epoch 7 - batch 60: 
+2024-05-14 15:17:31,103 P2337524 INFO ===
+2024-05-14 15:17:31,103 P2337524 INFO [Metrics] AUC: 0.887792 - logloss: 0.324748
+2024-05-14 15:17:31,104 P2337524 INFO Save best model: monitor(max)=0.563044
+2024-05-14 15:17:31,354 P2337524 INFO ************ Epoch=7 end ************
+2024-05-14 15:17:33,219 P2337524 INFO Train loss: 0.347944
+2024-05-14 15:17:33,220 P2337524 INFO Evaluation @epoch 8 - batch 60: 
+2024-05-14 15:17:34,054 P2337524 INFO ===
+2024-05-14 15:17:34,054 P2337524 INFO [Metrics] AUC: 0.891355 - logloss: 0.319622
+2024-05-14 15:17:34,054 P2337524 INFO Save best model: monitor(max)=0.571733
+2024-05-14 15:17:34,232 P2337524 INFO ************ Epoch=8 end ************
+2024-05-14 15:17:36,081 P2337524 INFO Train loss: 0.343944
+2024-05-14 15:17:36,081 P2337524 INFO Evaluation @epoch 9 - batch 60: 
+2024-05-14 15:17:36,953 P2337524 INFO ===
+2024-05-14 15:17:36,954 P2337524 INFO [Metrics] AUC: 0.894868 - logloss: 0.317584
+2024-05-14 15:17:36,954 P2337524 INFO Save best model: monitor(max)=0.577284
+2024-05-14 15:17:37,146 P2337524 INFO ************ Epoch=9 end ************
+2024-05-14 15:17:39,202 P2337524 INFO Train loss: 0.342379
+2024-05-14 15:17:39,202 P2337524 INFO Evaluation @epoch 10 - batch 60: 
+2024-05-14 15:17:40,113 P2337524 INFO ===
+2024-05-14 15:17:40,113 P2337524 INFO [Metrics] AUC: 0.897536 - logloss: 0.314936
+2024-05-14 15:17:40,114 P2337524 INFO Save best model: monitor(max)=0.582599
+2024-05-14 15:17:40,287 P2337524 INFO ************ Epoch=10 end ************
+2024-05-14 15:17:42,247 P2337524 INFO Train loss: 0.336896
+2024-05-14 15:17:42,248 P2337524 INFO Evaluation @epoch 11 - batch 60: 
+2024-05-14 15:17:43,094 P2337524 INFO ===
+2024-05-14 15:17:43,095 P2337524 INFO [Metrics] AUC: 0.899014 - logloss: 0.319815
+2024-05-14 15:17:43,095 P2337524 INFO Monitor(max)=0.579199 STOP!
+2024-05-14 15:17:43,095 P2337524 INFO Reduce learning rate on plateau: 0.000100
+2024-05-14 15:17:43,263 P2337524 INFO ************ Epoch=11 end ************
+2024-05-14 15:17:45,238 P2337524 INFO Train loss: 0.299045
+2024-05-14 15:17:45,239 P2337524 INFO Evaluation @epoch 12 - batch 60: 
+2024-05-14 15:17:46,096 P2337524 INFO ===
+2024-05-14 15:17:46,096 P2337524 INFO [Metrics] AUC: 0.901754 - logloss: 0.310865
+2024-05-14 15:17:46,096 P2337524 INFO Save best model: monitor(max)=0.590889
+2024-05-14 15:17:46,276 P2337524 INFO ************ Epoch=12 end ************
+2024-05-14 15:17:48,221 P2337524 INFO Train loss: 0.284029
+2024-05-14 15:17:48,222 P2337524 INFO Evaluation @epoch 13 - batch 60: 
+2024-05-14 15:17:49,113 P2337524 INFO ===
+2024-05-14 15:17:49,113 P2337524 INFO [Metrics] AUC: 0.902064 - logloss: 0.311215
+2024-05-14 15:17:49,113 P2337524 INFO Monitor(max)=0.590849 STOP!
+2024-05-14 15:17:49,113 P2337524 INFO Reduce learning rate on plateau: 0.000010
+2024-05-14 15:17:49,278 P2337524 INFO ************ Epoch=13 end ************
+2024-05-14 15:17:51,406 P2337524 INFO Train loss: 0.271956
+2024-05-14 15:17:51,406 P2337524 INFO Evaluation @epoch 14 - batch 60: 
+2024-05-14 15:17:52,281 P2337524 INFO ===
+2024-05-14 15:17:52,281 P2337524 INFO [Metrics] AUC: 0.902140 - logloss: 0.313681
+2024-05-14 15:17:52,282 P2337524 INFO Monitor(max)=0.588459 STOP!
+2024-05-14 15:17:52,282 P2337524 INFO Reduce learning rate on plateau: 0.000001
+2024-05-14 15:17:52,282 P2337524 INFO ********* Epoch==14 early stop *********
+2024-05-14 15:17:52,456 P2337524 INFO Training finished.
+2024-05-14 15:17:52,456 P2337524 INFO Load best model: /mnt/public/lhh/code/model_zoo/EPNN_plus/EPNN_torch/checkpoints/ML_1M_7/EPNN_20_ML_1M_7.model
+2024-05-14 15:17:52,466 P2337524 INFO ****** Validation evaluation ******
+2024-05-14 15:17:53,280 P2337524 INFO ===
+2024-05-14 15:17:53,280 P2337524 INFO [Metrics] logloss: 0.310865 - AUC: 0.901754
+2024-05-14 15:17:53,349 P2337524 INFO ******** Test evaluation ********
+2024-05-14 15:17:53,349 P2337524 INFO Loading data...
+2024-05-14 15:17:53,350 P2337524 INFO Loading data from h5: ../../../data/ML_1M_7/test.h5
+2024-05-14 15:17:53,364 P2337524 INFO Test samples: total/73902, blocks/1
+2024-05-14 15:17:53,364 P2337524 INFO Loading test data done.
+2024-05-14 15:17:54,239 P2337524 INFO ===
+2024-05-14 15:17:54,239 P2337524 INFO [Metrics] logloss: 0.309131 - AUC: 0.902410

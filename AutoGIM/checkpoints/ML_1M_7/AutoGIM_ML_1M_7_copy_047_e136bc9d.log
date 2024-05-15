@@ -1,0 +1,251 @@
+2024-05-14 19:53:00,954 P1215427 INFO Params: {
+    "batch_norm": "False",
+    "batch_size": "10000",
+    "cold_dim": "10",
+    "cold_tau": "0.008",
+    "continuous_patience": "10",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "ML_1M_7",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "20",
+    "embedding_regularizer": "0.005",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': ['UserID', 'Gender', 'Age', 'Occupation', 'MovieID', 'Release'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 5, 'name': 'Genres', 'splitter': '^', 'type': 'sequence'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "fi_hidden_units": "[800]",
+    "gnn_layers": "3",
+    "gpu": "0",
+    "group_id": "None",
+    "hidden_activations": "leaky_relu",
+    "label_col": "{'dtype': 'float', 'name': 'Label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "AutoGIM",
+    "model_id": "AutoGIM_ML_1M_7_copy_047_e136bc9d",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "only_use_last_layer": "True",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/ML-1M_7/test.csv",
+    "train_data": "../../../data/ML-1M_7/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/ML-1M_7/valid.csv",
+    "verbose": "1",
+    "w_hidden_units": "[800]",
+    "warm_dim": "10",
+    "warm_tau": "1.15"
+}
+2024-05-14 19:53:00,957 P1215427 INFO Set up feature processor...
+2024-05-14 19:53:00,958 P1215427 WARNING Skip rebuilding ../../../data/ML_1M_7/feature_map.json. Please delete it manually if rebuilding is required.
+2024-05-14 19:53:00,958 P1215427 INFO Load feature_map from json: ../../../data/ML_1M_7/feature_map.json
+2024-05-14 19:53:00,958 P1215427 INFO Set column index...
+2024-05-14 19:53:00,959 P1215427 INFO Feature specs: {
+    "Age": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "Gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "Genres": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 19, 'vocab_size': 20, 'max_len': 5}",
+    "MovieID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3497, 'vocab_size': 3498}",
+    "Occupation": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "Release": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "UserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6041, 'vocab_size': 6042}"
+}
+2024-05-14 19:53:06,800 P1215427 INFO Total number of parameters: 1369589.
+2024-05-14 19:53:06,800 P1215427 INFO Loading data...
+2024-05-14 19:53:06,800 P1215427 INFO Loading data from h5: ../../../data/ML_1M_7/train.h5
+2024-05-14 19:53:06,884 P1215427 INFO Train samples: total/591209, blocks/1
+2024-05-14 19:53:06,884 P1215427 INFO Loading data from h5: ../../../data/ML_1M_7/valid.h5
+2024-05-14 19:53:06,892 P1215427 INFO Validation samples: total/73901, blocks/1
+2024-05-14 19:53:06,892 P1215427 INFO Loading train and validation data done.
+2024-05-14 19:53:06,892 P1215427 INFO Start training: 60 batches/epoch
+2024-05-14 19:53:06,892 P1215427 INFO ************ Epoch=1 start ************
+2024-05-14 19:53:11,216 P1215427 INFO Train loss: 0.593835
+2024-05-14 19:53:11,216 P1215427 INFO Evaluation @epoch 1 - batch 60: 
+2024-05-14 19:53:12,268 P1215427 INFO ===
+2024-05-14 19:53:12,268 P1215427 INFO [Metrics] AUC: 0.709775 - logloss: 0.498917
+2024-05-14 19:53:12,268 P1215427 INFO Save best model: monitor(max)=0.210858
+2024-05-14 19:53:12,456 P1215427 INFO ************ Epoch=1 end ************
+2024-05-14 19:53:16,772 P1215427 INFO Train loss: 0.410312
+2024-05-14 19:53:16,772 P1215427 INFO Evaluation @epoch 2 - batch 60: 
+2024-05-14 19:53:17,830 P1215427 INFO ===
+2024-05-14 19:53:17,831 P1215427 INFO [Metrics] AUC: 0.858970 - logloss: 0.358365
+2024-05-14 19:53:17,831 P1215427 INFO Save best model: monitor(max)=0.500605
+2024-05-14 19:53:18,041 P1215427 INFO ************ Epoch=2 end ************
+2024-05-14 19:53:22,267 P1215427 INFO Train loss: 0.380913
+2024-05-14 19:53:22,268 P1215427 INFO Evaluation @epoch 3 - batch 60: 
+2024-05-14 19:53:23,363 P1215427 INFO ===
+2024-05-14 19:53:23,363 P1215427 INFO [Metrics] AUC: 0.862312 - logloss: 0.354946
+2024-05-14 19:53:23,363 P1215427 INFO Save best model: monitor(max)=0.507366
+2024-05-14 19:53:23,523 P1215427 INFO ************ Epoch=3 end ************
+2024-05-14 19:53:27,594 P1215427 INFO Train loss: 0.375074
+2024-05-14 19:53:27,595 P1215427 INFO Evaluation @epoch 4 - batch 60: 
+2024-05-14 19:53:28,591 P1215427 INFO ===
+2024-05-14 19:53:28,592 P1215427 INFO [Metrics] AUC: 0.864439 - logloss: 0.352466
+2024-05-14 19:53:28,592 P1215427 INFO Save best model: monitor(max)=0.511973
+2024-05-14 19:53:28,815 P1215427 INFO ************ Epoch=4 end ************
+2024-05-14 19:53:32,753 P1215427 INFO Train loss: 0.371639
+2024-05-14 19:53:32,754 P1215427 INFO Evaluation @epoch 5 - batch 60: 
+2024-05-14 19:53:33,810 P1215427 INFO ===
+2024-05-14 19:53:33,811 P1215427 INFO [Metrics] AUC: 0.866443 - logloss: 0.350792
+2024-05-14 19:53:33,811 P1215427 INFO Save best model: monitor(max)=0.515651
+2024-05-14 19:53:34,001 P1215427 INFO ************ Epoch=5 end ************
+2024-05-14 19:53:38,334 P1215427 INFO Train loss: 0.368270
+2024-05-14 19:53:38,334 P1215427 INFO Evaluation @epoch 6 - batch 60: 
+2024-05-14 19:53:39,516 P1215427 INFO ===
+2024-05-14 19:53:39,516 P1215427 INFO [Metrics] AUC: 0.869299 - logloss: 0.346756
+2024-05-14 19:53:39,516 P1215427 INFO Save best model: monitor(max)=0.522543
+2024-05-14 19:53:39,696 P1215427 INFO ************ Epoch=6 end ************
+2024-05-14 19:53:44,175 P1215427 INFO Train loss: 0.364107
+2024-05-14 19:53:44,176 P1215427 INFO Evaluation @epoch 7 - batch 60: 
+2024-05-14 19:53:45,334 P1215427 INFO ===
+2024-05-14 19:53:45,335 P1215427 INFO [Metrics] AUC: 0.873187 - logloss: 0.342451
+2024-05-14 19:53:45,335 P1215427 INFO Save best model: monitor(max)=0.530736
+2024-05-14 19:53:45,481 P1215427 INFO ************ Epoch=7 end ************
+2024-05-14 19:53:49,642 P1215427 INFO Train loss: 0.359843
+2024-05-14 19:53:49,642 P1215427 INFO Evaluation @epoch 8 - batch 60: 
+2024-05-14 19:53:50,562 P1215427 INFO ===
+2024-05-14 19:53:50,562 P1215427 INFO [Metrics] AUC: 0.875493 - logloss: 0.339956
+2024-05-14 19:53:50,562 P1215427 INFO Save best model: monitor(max)=0.535536
+2024-05-14 19:53:50,796 P1215427 INFO ************ Epoch=8 end ************
+2024-05-14 19:53:54,383 P1215427 INFO Train loss: 0.356550
+2024-05-14 19:53:54,383 P1215427 INFO Evaluation @epoch 9 - batch 60: 
+2024-05-14 19:53:55,450 P1215427 INFO ===
+2024-05-14 19:53:55,450 P1215427 INFO [Metrics] AUC: 0.877806 - logloss: 0.337767
+2024-05-14 19:53:55,450 P1215427 INFO Save best model: monitor(max)=0.540039
+2024-05-14 19:53:55,697 P1215427 INFO ************ Epoch=9 end ************
+2024-05-14 19:53:59,454 P1215427 INFO Train loss: 0.352910
+2024-05-14 19:53:59,454 P1215427 INFO Evaluation @epoch 10 - batch 60: 
+2024-05-14 19:54:00,719 P1215427 INFO ===
+2024-05-14 19:54:00,719 P1215427 INFO [Metrics] AUC: 0.881270 - logloss: 0.332607
+2024-05-14 19:54:00,719 P1215427 INFO Save best model: monitor(max)=0.548662
+2024-05-14 19:54:00,896 P1215427 INFO ************ Epoch=10 end ************
+2024-05-14 19:54:05,570 P1215427 INFO Train loss: 0.349571
+2024-05-14 19:54:05,580 P1215427 INFO Evaluation @epoch 11 - batch 60: 
+2024-05-14 19:54:06,811 P1215427 INFO ===
+2024-05-14 19:54:06,811 P1215427 INFO [Metrics] AUC: 0.885462 - logloss: 0.327307
+2024-05-14 19:54:06,811 P1215427 INFO Save best model: monitor(max)=0.558155
+2024-05-14 19:54:07,024 P1215427 INFO ************ Epoch=11 end ************
+2024-05-14 19:54:11,939 P1215427 INFO Train loss: 0.345827
+2024-05-14 19:54:11,939 P1215427 INFO Evaluation @epoch 12 - batch 60: 
+2024-05-14 19:54:13,208 P1215427 INFO ===
+2024-05-14 19:54:13,208 P1215427 INFO [Metrics] AUC: 0.888000 - logloss: 0.324213
+2024-05-14 19:54:13,208 P1215427 INFO Save best model: monitor(max)=0.563787
+2024-05-14 19:54:13,414 P1215427 INFO ************ Epoch=12 end ************
+2024-05-14 19:54:18,266 P1215427 INFO Train loss: 0.342269
+2024-05-14 19:54:18,266 P1215427 INFO Evaluation @epoch 13 - batch 60: 
+2024-05-14 19:54:19,400 P1215427 INFO ===
+2024-05-14 19:54:19,400 P1215427 INFO [Metrics] AUC: 0.891546 - logloss: 0.320385
+2024-05-14 19:54:19,401 P1215427 INFO Save best model: monitor(max)=0.571162
+2024-05-14 19:54:19,535 P1215427 INFO ************ Epoch=13 end ************
+2024-05-14 19:54:23,982 P1215427 INFO Train loss: 0.338204
+2024-05-14 19:54:23,982 P1215427 INFO Evaluation @epoch 14 - batch 60: 
+2024-05-14 19:54:25,216 P1215427 INFO ===
+2024-05-14 19:54:25,216 P1215427 INFO [Metrics] AUC: 0.893397 - logloss: 0.317825
+2024-05-14 19:54:25,217 P1215427 INFO Save best model: monitor(max)=0.575572
+2024-05-14 19:54:25,366 P1215427 INFO ************ Epoch=14 end ************
+2024-05-14 19:54:30,085 P1215427 INFO Train loss: 0.335088
+2024-05-14 19:54:30,085 P1215427 INFO Evaluation @epoch 15 - batch 60: 
+2024-05-14 19:54:31,436 P1215427 INFO ===
+2024-05-14 19:54:31,436 P1215427 INFO [Metrics] AUC: 0.895578 - logloss: 0.315345
+2024-05-14 19:54:31,437 P1215427 INFO Save best model: monitor(max)=0.580233
+2024-05-14 19:54:31,592 P1215427 INFO ************ Epoch=15 end ************
+2024-05-14 19:54:36,244 P1215427 INFO Train loss: 0.333797
+2024-05-14 19:54:36,245 P1215427 INFO Evaluation @epoch 16 - batch 60: 
+2024-05-14 19:54:37,528 P1215427 INFO ===
+2024-05-14 19:54:37,529 P1215427 INFO [Metrics] AUC: 0.897086 - logloss: 0.312719
+2024-05-14 19:54:37,529 P1215427 INFO Save best model: monitor(max)=0.584367
+2024-05-14 19:54:37,734 P1215427 INFO ************ Epoch=16 end ************
+2024-05-14 19:54:42,286 P1215427 INFO Train loss: 0.329721
+2024-05-14 19:54:42,286 P1215427 INFO Evaluation @epoch 17 - batch 60: 
+2024-05-14 19:54:43,392 P1215427 INFO ===
+2024-05-14 19:54:43,392 P1215427 INFO [Metrics] AUC: 0.898546 - logloss: 0.310608
+2024-05-14 19:54:43,392 P1215427 INFO Save best model: monitor(max)=0.587938
+2024-05-14 19:54:43,609 P1215427 INFO ************ Epoch=17 end ************
+2024-05-14 19:54:48,687 P1215427 INFO Train loss: 0.327724
+2024-05-14 19:54:48,687 P1215427 INFO Evaluation @epoch 18 - batch 60: 
+2024-05-14 19:54:49,910 P1215427 INFO ===
+2024-05-14 19:54:49,910 P1215427 INFO [Metrics] AUC: 0.899241 - logloss: 0.310738
+2024-05-14 19:54:49,910 P1215427 INFO Save best model: monitor(max)=0.588503
+2024-05-14 19:54:50,148 P1215427 INFO ************ Epoch=18 end ************
+2024-05-14 19:54:54,983 P1215427 INFO Train loss: 0.325531
+2024-05-14 19:54:54,983 P1215427 INFO Evaluation @epoch 19 - batch 60: 
+2024-05-14 19:54:56,331 P1215427 INFO ===
+2024-05-14 19:54:56,332 P1215427 INFO [Metrics] AUC: 0.900194 - logloss: 0.308208
+2024-05-14 19:54:56,332 P1215427 INFO Save best model: monitor(max)=0.591986
+2024-05-14 19:54:56,537 P1215427 INFO ************ Epoch=19 end ************
+2024-05-14 19:55:01,110 P1215427 INFO Train loss: 0.323057
+2024-05-14 19:55:01,110 P1215427 INFO Evaluation @epoch 20 - batch 60: 
+2024-05-14 19:55:02,440 P1215427 INFO ===
+2024-05-14 19:55:02,440 P1215427 INFO [Metrics] AUC: 0.900717 - logloss: 0.307146
+2024-05-14 19:55:02,440 P1215427 INFO Save best model: monitor(max)=0.593572
+2024-05-14 19:55:02,672 P1215427 INFO ************ Epoch=20 end ************
+2024-05-14 19:55:07,521 P1215427 INFO Train loss: 0.320753
+2024-05-14 19:55:07,521 P1215427 INFO Evaluation @epoch 21 - batch 60: 
+2024-05-14 19:55:08,848 P1215427 INFO ===
+2024-05-14 19:55:08,848 P1215427 INFO [Metrics] AUC: 0.901383 - logloss: 0.306224
+2024-05-14 19:55:08,849 P1215427 INFO Save best model: monitor(max)=0.595159
+2024-05-14 19:55:09,088 P1215427 INFO ************ Epoch=21 end ************
+2024-05-14 19:55:13,866 P1215427 INFO Train loss: 0.319592
+2024-05-14 19:55:13,867 P1215427 INFO Evaluation @epoch 22 - batch 60: 
+2024-05-14 19:55:15,200 P1215427 INFO ===
+2024-05-14 19:55:15,208 P1215427 INFO [Metrics] AUC: 0.901976 - logloss: 0.305767
+2024-05-14 19:55:15,209 P1215427 INFO Save best model: monitor(max)=0.596208
+2024-05-14 19:55:15,390 P1215427 INFO ************ Epoch=22 end ************
+2024-05-14 19:55:19,941 P1215427 INFO Train loss: 0.317285
+2024-05-14 19:55:19,941 P1215427 INFO Evaluation @epoch 23 - batch 60: 
+2024-05-14 19:55:21,217 P1215427 INFO ===
+2024-05-14 19:55:21,217 P1215427 INFO [Metrics] AUC: 0.901291 - logloss: 0.307010
+2024-05-14 19:55:21,217 P1215427 INFO Monitor(max)=0.594281 STOP!
+2024-05-14 19:55:21,217 P1215427 INFO Reduce learning rate on plateau: 0.000100
+2024-05-14 19:55:21,408 P1215427 INFO ************ Epoch=23 end ************
+2024-05-14 19:55:26,178 P1215427 INFO Train loss: 0.287606
+2024-05-14 19:55:26,178 P1215427 INFO Evaluation @epoch 24 - batch 60: 
+2024-05-14 19:55:27,552 P1215427 INFO ===
+2024-05-14 19:55:27,553 P1215427 INFO [Metrics] AUC: 0.903876 - logloss: 0.304962
+2024-05-14 19:55:27,553 P1215427 INFO Save best model: monitor(max)=0.598913
+2024-05-14 19:55:27,842 P1215427 INFO ************ Epoch=24 end ************
+2024-05-14 19:55:32,264 P1215427 INFO Train loss: 0.278948
+2024-05-14 19:55:32,265 P1215427 INFO Evaluation @epoch 25 - batch 60: 
+2024-05-14 19:55:33,478 P1215427 INFO ===
+2024-05-14 19:55:33,478 P1215427 INFO [Metrics] AUC: 0.904649 - logloss: 0.304748
+2024-05-14 19:55:33,478 P1215427 INFO Save best model: monitor(max)=0.599901
+2024-05-14 19:55:33,634 P1215427 INFO ************ Epoch=25 end ************
+2024-05-14 19:55:37,602 P1215427 INFO Train loss: 0.273937
+2024-05-14 19:55:37,602 P1215427 INFO Evaluation @epoch 26 - batch 60: 
+2024-05-14 19:55:38,609 P1215427 INFO ===
+2024-05-14 19:55:38,610 P1215427 INFO [Metrics] AUC: 0.904903 - logloss: 0.305335
+2024-05-14 19:55:38,610 P1215427 INFO Monitor(max)=0.599567 STOP!
+2024-05-14 19:55:38,610 P1215427 INFO Reduce learning rate on plateau: 0.000010
+2024-05-14 19:55:38,815 P1215427 INFO ************ Epoch=26 end ************
+2024-05-14 19:55:43,497 P1215427 INFO Train loss: 0.267423
+2024-05-14 19:55:43,497 P1215427 INFO Evaluation @epoch 27 - batch 60: 
+2024-05-14 19:55:44,587 P1215427 INFO ===
+2024-05-14 19:55:44,587 P1215427 INFO [Metrics] AUC: 0.904981 - logloss: 0.305696
+2024-05-14 19:55:44,588 P1215427 INFO Monitor(max)=0.599285 STOP!
+2024-05-14 19:55:44,588 P1215427 INFO Reduce learning rate on plateau: 0.000001
+2024-05-14 19:55:44,588 P1215427 INFO ********* Epoch==27 early stop *********
+2024-05-14 19:55:44,790 P1215427 INFO Training finished.
+2024-05-14 19:55:44,790 P1215427 INFO Load best model: /mnt/public/lhh/code/model_zoo/DNN_plus/DNN_torch/checkpoints/ML_1M_7/AutoGIM_ML_1M_7_copy_047_e136bc9d.model
+2024-05-14 19:55:44,815 P1215427 INFO ****** Validation evaluation ******
+2024-05-14 19:55:46,241 P1215427 INFO ===
+2024-05-14 19:55:46,241 P1215427 INFO [Metrics] logloss: 0.304717 - AUC: 0.904712
+2024-05-14 19:55:46,321 P1215427 INFO ******** Test evaluation ********
+2024-05-14 19:55:46,322 P1215427 INFO Loading data...
+2024-05-14 19:55:46,322 P1215427 INFO Loading data from h5: ../../../data/ML_1M_7/test.h5
+2024-05-14 19:55:46,331 P1215427 INFO Test samples: total/73902, blocks/1
+2024-05-14 19:55:46,331 P1215427 INFO Loading test data done.
+2024-05-14 19:55:47,809 P1215427 INFO ===
+2024-05-14 19:55:47,809 P1215427 INFO [Metrics] logloss: 0.302097 - AUC: 0.906324
