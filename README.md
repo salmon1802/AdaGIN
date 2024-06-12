@@ -27,9 +27,3 @@ Get the result from https://github.com/salmon1802/AutoGIM/tree/main/AutoGIM/chec
 This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.  
 BARS: https://github.com/openbenchmark  
 FuxiCTR: https://github.com/xue-pai/FuxiCTR
-
-## Citation
-If you find our code helpful for your research, please cite the following paper:
-
-```bibtex
-```
