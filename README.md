@@ -14,8 +14,7 @@ numpy
 h5py  
 tqdm  
 ## Experiment results
-![image](https://github.com/salmon1802/AdaGIN/assets/73091798/390a340f-3360-4f94-9378-3b16e46415aa)
-
+![image](https://github.com/user-attachments/assets/e1e5584b-08f7-49b9-8502-427c8a4b6389)
 
 ## Datasets
 Get the datasets from https://github.com/reczoo/Datasets
@@ -27,3 +26,13 @@ Get the result from https://github.com/salmon1802/AutoGIM/tree/main/AutoGIM/chec
 This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.  
 BARS: https://github.com/openbenchmark  
 FuxiCTR: https://github.com/xue-pai/FuxiCTR
+
+```bibtex
+@article{AdaGIN,
+  title={AdaGIN: Adaptive Graph Interaction Network for Click-Through Rate Prediction},
+  author={Sang, Lei and Li, Honghao and Zhang, Yiwen and Zhang, Yi and Yang, Yun},
+  journal={ACM Transactions on Information Systems},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+```
