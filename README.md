@@ -14,7 +14,7 @@ numpy
 h5py  
 tqdm  
 ## Experiment results
-![image](https://github.com/user-attachments/assets/e1e5584b-08f7-49b9-8502-427c8a4b6389)
+![image](https://github.com/user-attachments/assets/f45da52b-dda2-48bd-962e-28f7f1517803)
 
 ## Datasets
 Get the datasets from https://github.com/reczoo/Datasets
